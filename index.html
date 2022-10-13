@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/box-shadow-generator.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Генератор CSS</title>
+  </head>
+
+  <body>
+    <!-- ГЕНЕРАТОР ГРАДИЕНТА -->
+    <h1>CSS Generators</h1>
+    <div class="generators">
+      <div class="gen">
+        <h2>Gradient Generator</h2>
+        <form>
+          <h3>Настройки</h3>
+          <p>Цвета:</p>
+          <div class="gradientColors">
+            <div>
+              <header>Цвет 1</header>
+              <label for="colorOne"></label>
+              <input type="color" id="colorOne" class="grdColor grd" />
+            </div>
+            <div>
+              <header>Цвет 2</header>
+              <label for="colorTwo"></label>
+              <input
+                type="color"
+                id="colorTwo"
+                class="grdColor grd"
+                value="#ff0000"
+              />
+            </div>
+          </div>
+          <label for="degree">Направление</label>
+          <input
+            class="border grd"
+            type="range"
+            id="degree"
+            min="0"
+            max="359"
+            step="1"
+            value="180"
+          />
+          <label for="colorOneMove">Смещение 1го цвета</label>
+          <input
+            class="border grd"
+            type="range"
+            id="colorOneMove"
+            min="0"
+            max="100"
+            step="1"
+            value="25"
+          />
+          <label for="colorTwoMove">Смещение 2го цвета</label>
+          <input
+            class="border grd"
+            type="range"
+            id="colorTwoMove"
+            min="0"
+            max="100"
+            step="1"
+            value="75"
+          />
+          <h3>Результат</h3>
+          <div id="resultGrd"></div>
+          <textarea id="cssGradien" readonly></textarea>
+        </form>
+      </div>
+
+      <!-- ГЕНЕРАТОР ГРАНИЦ -->
+      <div class="gen">
+        <h2>Border-radius Generator</h2>
+        <form>
+          <h3>Настройки</h3>
+          <label for="top-left">top-left</label>
+          <input
+            class="border"
+            type="range"
+            id="top-left"
+            min="0"
+            max="75"
+            step="1"
+            value="0"
+          />
+          <label for="top-right">top-right</label>
+          <input
+            class="border"
+            type="range"
+            id="top-right"
+            min="0"
+            max="75"
+            step="1"
+            value="0"
+          />
+          <label for="bottom-left">bottom-left</label>
+          <input
+            class="border"
+            type="range"
+            id="bottom-left"
+            min="0"
+            max="75"
+            step="1"
+            value="0"
+          />
+          <label for="bottom-right">bottom-right</label>
+          <input
+            class="border"
+            type="range"
+            id="bottom-right"
+            min="0"
+            max="75"
+            step="1"
+            value="0"
+          />
+          <h3>Результат</h3>
+          <div id="result2" class="result"></div>
+          <textarea id="cssCodeBorder" readonly></textarea>
+        </form>
+      </div>
+
+      <!-- ГЕНЕРАТОР ТРЕУГОЛЬНИКА -->
+      <div class="gen">
+        <h2>Triangle Generator</h2>
+        <form>
+          <h3>Настройки</h3>
+          <div id="RadioButtons" style="text-align: center">
+            <input type="radio" name="radio" id="top" checked /> Top
+            <input type="radio" name="radio" id="topLeft" /> Top Left
+            <input type="radio" name="radio" id="topRight" /> Top Right<br />
+            <input type="radio" name="radio" id="left" /> Left
+            <input type="radio" name="radio" id="right" />Right <br />
+            <input type="radio" name="radio" id="bottomLeft" />Bottom Left
+            <input type="radio" name="radio" id="bottomRight" />Bottom Right
+            <input type="radio" name="radio" id="bottom" />Bottom
+          </div>
+
+          <label for="widthTR">width</label>
+          <input
+            type="range"
+            id="widthTR"
+            min="1"
+            max="100"
+            step="1"
+            value="50"
+            class="triangleInput"
+          />
+
+          <label for="heightTR">height</label>
+          <input
+            type="range"
+            id="heightTR"
+            min="1"
+            max="100"
+            step="1"
+            value="50"
+            class="triangleInput"
+          />
+
+          <h3>Результат</h3>
+          <span id="triangleResult"></span>
+          <textarea id="triangleCSS" readonly></textarea>
+        </form>
+      </div>
+
+      <!-- ГЕНЕРАТОР ТЕНИ -->
+      <div class="gen">
+        <h2>Box-shadow Generator</h2>
+        <form>
+          <h3>Настройки</h3>
+          <div class="form-group">
+            <label for="inset">Тень внутри элемента?</label>
+            <input type="checkbox" id="inset" checked />
+          </div>
+          <label for="offsetX">Смещение по оси x</label>
+          <input
+            type="range"
+            id="offsetX"
+            min="-25"
+            max="25"
+            step="1"
+            value="0"
+          />
+          <label for="offsetY">Смещение по оси y</label>
+          <input
+            type="range"
+            id="offsetY"
+            min="-25"
+            max="25"
+            step="1"
+            value="0"
+          />
+          <label for="blur">Разымытие</label>
+          <input type="range" id="blur" min="0" max="25" step="1" value="8" />
+          <label for="stretch">Растяжение</label>
+          <input
+            type="range"
+            id="stretch"
+            min="-20"
+            max="20"
+            step="1"
+            value="6"
+          />
+
+          <label for="color">Цвет</label>
+          <input type="color" id="color" />
+          <label for="opacity">Прозрачность</label>
+          <input
+            type="range"
+            id="opacity"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.5"
+          />
+
+          <h3>Результат</h3>
+          <div id="result" class="result"></div>
+          <textarea id="cssCode" readonly></textarea>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

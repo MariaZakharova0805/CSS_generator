@@ -1,0 +1,70 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+h3 {
+  background-color: blue;
+  color: azure;
+  padding: 3px;
+  border-radius: 5px;
+}
+.result {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(231, 188, 0);
+  margin: 10px;
+}
+.generators {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.gen {
+  margin: 20px;
+  border: 5px dashed blue;
+  padding: 10px;
+  border-radius: 15px;
+}
+input {
+  margin: 5px;
+}
+input:hover {
+  cursor: pointer;
+}
+h1,
+h2 {
+  text-align: center;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+/* gradient */
+.gradientColors {
+  display: flex;
+  flex-direction: row;
+}
+
+.grdColor {
+  width: 50px;
+  height: 50px;
+}
+#resultGrd {
+  width: 400px;
+  height: 100px;
+}
+
+#triangleCSS {
+  height: 150px;
+  margin-top: 10px;
+}
+
+#triangleResult {
+  width: 0;
+  height: 0;
+  border-style: solid;
+
+  border-width: 0 100px 20x 100px;
+  border-color: transparent transparent #007bff transparent;
+}
